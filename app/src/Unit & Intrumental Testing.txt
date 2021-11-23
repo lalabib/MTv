@@ -1,0 +1,68 @@
+Skenario Testing Subsmission 1 :
+
+UNIT TESTING
+
+MovieViewModelTest:
+
+   *Memuat Movies:
+     -Memastikan data movie tidak null.
+     -Memastikan jumlah data movie sesuai dengan yang diharapkan.
+
+TvViewModelTest:
+
+   *Memuat TvShows:
+     -Memastikan data tvShow tidak null.
+     -Memastikan jumlah data tvShow sesuai dengan yang diharapkan.
+
+DetailViewModelTest:
+
+ *Memuat Detail Movie: 
+  -Memastikan data detail Movie tidak null.
+  -Memastikan id telah sesuai
+  -Memastikan Title telah sesuai
+  -Memastikan genre telah sesuai
+  -Memastikan rate telah sesuai
+  -Memastikan poster telah sesuai
+  -Memastikan overview telah sesuai
+
+*Memuat Detail TvShow: 
+  -Memastikan data detail TvShow tidak null.
+  -Memastikan id telah sesuai
+  -Memastikan Title telah sesuai
+  -Memastikan genre telah sesuai
+  -Memastikan rate telah sesuai
+  -Memastikan poster telah sesuai
+  -Memastikan overview telah sesuai
+
+INSTRUMENTAL TESTING
+
+*Menampilkan data movie
+  -Memastikan rvMovie dalam keadaan tampil.
+  -memberi tindakan Gulir rvMovie.
+
+*Halaman detail movie
+  -Memberi tindakan klik pada data ke 3 di rvMovie.
+  -Memastikan imgPoster dalam keadaan tampil.
+  -Memastikan detailTitle untuk title tampil sesuai dengan yang diharapkan.
+  -Memastikan detailGenre untuk genre tampil sesuai dengan yang diharapkan.
+  -Memastikan detailRate untuk rate tampil sesuai dengan yang diharapkan.
+  -Memastikan detailOverview untuk overview tampil sesuai dengan yang diharapkan.
+  -Memberi tindakan klik pada favorite icon
+  -Memberi tindakan klik pada share icon
+
+*Menampilkan data tvShow
+  -Memberi tindakan klik pada bottom navigation tv
+  -Memastikan rvTv dalam keadaan tampil.
+  -memberi tindakan Gulir rvTv.
+
+*Halaman detail tvShow
+  -Memberi tindakan klik pada data ke 3 di rvTv.
+  -Memastikan imgPoster dalam keadaan tampil.
+  -Memastikan detailTitle untuk title tampil sesuai dengan yang diharapkan.
+  -Memastikan detailGenre untuk genre tampil sesuai dengan yang diharapkan.
+  -Memastikan detailRate untuk rate tampil sesuai dengan yang diharapkan.
+  -Memastikan detailOverview untuk overview tampil sesuai dengan yang diharapkan.
+  -Memberi tindakan klik pada favorite icon
+  -Memberi tindakan klik pada share icon
+
+
