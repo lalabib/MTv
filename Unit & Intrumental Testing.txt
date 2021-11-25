@@ -1,0 +1,132 @@
+Skenario Testing Subsmission 3 :
+
+UNIT TESTING
+
+MovieViewModelTest:
+  *Memuat Movies:
+    -Mendapatkan data dari pagedList
+    -Memastikan metode di kelas repository terpanggil
+    -Memastikan data movie tidak null
+    -Memastikan jumlah data movie sesuai dengan yang diharapkan
+    -Memverifikasi observer dengan observer
+
+TvViewModelTest:
+  *Memuat TvShows:
+    -Mendapatkan data dari pagedList
+    -Memastikan metode di kelas repository terpanggil
+    -Memastikan data tvShow tidak null
+    -Memastikan jumlah data tvShow sesuai dengan yang diharapkan
+    -Memverifikasi observer dengan observer     
+
+DetailViewModelTest:
+ *Memuat Detail Movie: 
+  -Mendapatkan data dari repository
+  -Memastikan data detail Movie tidak null
+  -Memastikan id telah sesuai
+  -Memastikan title telah sesuai
+  -Memastikan releaseDate telah sesuai
+  -Memastikan voteAverage telah sesuai
+  -Memastikan poster telah sesuai
+  -Memastikan overview telah sesuai
+  -Memverifikasi observer dengan observer     
+  -Memastikan terjadi perubahan data pada LiveData
+
+
+*Memuat Detail TvShow: 
+  -Mendapatkan data dari repository
+  -Memastikan metode di kelas repository terpanggil
+  -Memastikan data detail TvShow tidak null
+  -Memastikan id telah sesuai
+  -Memastikan name telah sesuai
+  -Memastikan firstAirDate telah sesuai
+  -Memastikan voteAverage telah sesuai
+  -Memastikan poster telah sesuai
+  -Memastikan overview telah sesuai
+  -Memverifikasi observer dengan observer     
+  -Memastikan terjadi perubahan data pada LiveData
+
+FavMovieViewModelTest:
+   -Mendapatkan data dari pagedList
+   -Memastikan metode di kelas repository terpanggil
+   -Memastikan data movie tidak null
+   -Memastikan jumlah data movie sesuai dengan yang diharapkan
+   -Memverifikasi observer dengan observer
+
+FavTvShowViewModelTest:
+   -Mendapatkan data dari pagedList
+   -Memastikan metode di kelas repository terpanggil
+   -Memastikan data tvShow tidak null
+   -Memastikan jumlah data tvShow sesuai dengan yang diharapkan
+   -Memverifikasi observer dengan observer     
+
+MtvRepositoryTest:
+-Melakukan pengujian pada tiap metode bahwa datanya tidak null 
+ dan jumlah datanya sesuai dengan yang diharapkan
+
+
+INSTRUMENTAL TESTING
+
+*Menampilkan data movie
+  -Memberi tindakan klik pada bottom navigation movie
+  -Memastikan rvMovie dalam keadaan tampil.
+  -memberi tindakan Gulir rvMovie.
+
+*Halaman detail movie
+  -Memberi tindakan klik pada bottom navigation movie
+  -Memberi tindakan klik pada data ke 3 di rvMovie
+  -Memastikan imgPoster dalam keadaan tampil
+  -Memastikan detailTitle tampil sesuai dengan yang diharapkan
+  -Memastikan detailRelease tampil sesuai dengan yang diharapkan
+  -Memastikan detailRate tampil sesuai dengan yang diharapkan
+  -Memastikan detailOverview tampil sesuai dengan yang diharapkan
+
+*Menampilkan data Favorite Movie
+  -Memberi tindakan klik pada bottom navigation movie
+  -Memberi tindakan klik pada data ke 3 di rvMovie
+  -Memberi tindakan klik pada favorite icon
+  -Kembali ke halaman sebelumnya
+
+  -Memberi tindakan klik pada bottom navigation favorite
+  -Memastikan rvfavMovie dalam keadaan tampil
+  -Memberi tindakan klik pada data ke 1 di rvFavMovie
+  -Memastikan imgPoster dalam keadaan tampil
+  -Memastikan detailTitle tampil sesuai dengan yang diharapkan
+  -Memastikan detailRelease tampil sesuai dengan yang diharapkan
+  -Memastikan detailRate tampil sesuai dengan yang diharapkan
+  -Memastikan detailOverview tampil sesuai dengan yang diharapkan
+  -Memberi tindakan klik pada share icon
+
+
+*Menampilkan data tvShow
+  -Memberi tindakan klik pada bottom navigation tv
+  -Memastikan rvTv dalam keadaan tampil
+  -memberi tindakan Gulir rvTv
+
+*Halaman detail tvShow
+  -Memberi tindakan klik pada bottom navigation tv
+  -Memberi tindakan klik pada data ke 3 di rvTv
+  -Memastikan imgPoster dalam keadaan tampil
+  -Memastikan detailTitle tampil sesuai dengan yang diharapkan
+  -Memastikan detailRelease tampil sesuai dengan yang diharapkan
+  -Memastikan detailRate tampil sesuai dengan yang diharapkan
+  -Memastikan detailOverview tampil sesuai dengan yang diharapkan
+
+*Menampilkan data Favorite TvShow
+  -Memberi tindakan klik pada bottom navigation tv
+  -Memberi tindakan klik pada data ke 3 di rvTv
+  -Memberi tindakan klik pada favorite icon
+  -Kembali ke halaman sebelumnya
+
+  -Memberi tindakan klik pada bottom navigation fav
+  -Memberi tindakan klik pada tab tv shows
+  -Memastikan rvfavTvShow dalam keadaan tampil
+  -Memberi tindakan klik pada data ke 1 di rvFavTvShow
+  -Memastikan imgPoster dalam keadaan tampil
+  -Memastikan detailTitle tampil sesuai dengan yang diharapkan
+  -Memastikan detailRelease tampil sesuai dengan yang diharapkan
+  -Memastikan detailRate tampil sesuai dengan yang diharapkan
+  -Memastikan detailOverview tampil sesuai dengan yang diharapkan
+  -Memberi tindakan klik pada share icon
+
+
+
