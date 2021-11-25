@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MTv</string>
+
+    <string name="movie">Movies</string>
+    <string name="tv_shows">Tv Shows</string>
+    <string name="title_fav">Favorites</string>
+    <string name="title">Title of Movie or Tv Show</string>
+    <string name="overview">Lorem ipsum</string>
+    <string name="detail">Overview</string>
+    <string name="movie_description">Movie Description</string>
+    <string name="poster">Poster movie</string>
+    <string name="rate">0</string>
+    <string name="error_message">Terjadi Kesalahan</string>
+</resources>
