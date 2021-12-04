@@ -16,7 +16,7 @@ android {
         versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField ("String", "SecretCode", '"3fdaf3adbbd3a2b6c4605e466e1c43fc"')
+        buildConfigField ("String", "SecretCode", '"secretCode"')
     }
 
     buildTypes {
