@@ -8,13 +8,6 @@ import com.lalabib.project.mtv.data.local.room.MtvDao
 
 class LocalDataSource(private val mtvDao: MtvDao) {
 
-    companion object {
-        private var INSTANCE: LocalDataSource? = null
-
-        fun getInstance(mtvDao: MtvDao): LocalDataSource =
-            INSTANCE ?: LocalDataSource(mtvDao)
-    }
-
     fun getMovies(): DataSource.Factory<Int, MovieEntity> = mtvDao.getMovies()
 
     fun getTvShows(): DataSource.Factory<Int, TvShowEntity> = mtvDao.getTvShows()
@@ -47,5 +40,12 @@ class LocalDataSource(private val mtvDao: MtvDao) {
     fun setTvShowStatus(tvShow: TvShowEntity, newState: Boolean) {
         tvShow.isFavorite = newState
         mtvDao.updateTvShows(tvShow)
+    }
+    
+    companion object {
+        private var INSTANCE: LocalDataSource? = null
+
+        fun getInstance(mtvDao: MtvDao): LocalDataSource =
+            INSTANCE ?: LocalDataSource(mtvDao)
     }
 }
