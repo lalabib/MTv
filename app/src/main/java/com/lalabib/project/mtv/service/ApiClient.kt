@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
-    private const val baseUrl = "https://api.themoviedb.org/3/"
+    private const val baseUrl = url
     val instance: ApiEndPoint by lazy {
         val interceptor = if(BuildConfig.DEBUG) {
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
