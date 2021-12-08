@@ -1,5 +1,3 @@
-Skenario Testing Subsmission 3 :
-
 UNIT TESTING
 
 MovieViewModelTest:
@@ -127,6 +125,3 @@ INSTRUMENTAL TESTING
   -Memastikan detailRate tampil sesuai dengan yang diharapkan
   -Memastikan detailOverview tampil sesuai dengan yang diharapkan
   -Memberi tindakan klik pada share icon
-
-
-
