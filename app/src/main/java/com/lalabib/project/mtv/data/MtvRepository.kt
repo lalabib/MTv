@@ -21,22 +21,6 @@ class MtvRepository private constructor(
     private val appExecutors: AppExecutors
     ) : MtvDataSource {
 
-    companion object {
-        @Volatile
-        private var instance: MtvRepository? = null
-
-        fun getInstance(
-            remoteData: RemoteDataSource,
-            localData: LocalDataSource,
-            appExecutors: AppExecutors
-        ): MtvRepository =
-            instance ?: synchronized(this) {
-                instance ?: MtvRepository(remoteData, localData, appExecutors ).apply {
-                    instance = this
-                }
-            }
-    }
-
     override fun getMovie(): LiveData<Resource<PagedList<MovieEntity>>> {
         return object : NetworkBoundResource<PagedList<MovieEntity>, MovieResponse>(appExecutors) {
             public override fun loadFromDB(): LiveData<PagedList<MovieEntity>> {
@@ -167,5 +151,21 @@ class MtvRepository private constructor(
         appExecutors.diskIO().execute {
             localDataSource.setTvShowStatus(tvShow, isFavorite)
         }
+    }
+    
+     companion object {
+        @Volatile
+        private var instance: MtvRepository? = null
+
+        fun getInstance(
+            remoteData: RemoteDataSource,
+            localData: LocalDataSource,
+            appExecutors: AppExecutors
+        ): MtvRepository =
+            instance ?: synchronized(this) {
+                instance ?: MtvRepository(remoteData, localData, appExecutors ).apply {
+                    instance = this
+                }
+            }
     }
 }
