@@ -11,10 +11,6 @@ import com.lalabib.project.mtv.ui.favorite.tvshow.FavTvShowFragment
 class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager)
     : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-    companion object {
-        private val TAB_TITLES = intArrayOf(R.string.movie, R.string.tv_shows)
-    }
-
     override fun getItem(position: Int): Fragment =
         when (position) {
             0 -> FavMovieFragment()
@@ -26,4 +22,8 @@ class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager)
     : CharSequence = mContext.resources.getString(TAB_TITLES[position])
 
     override fun getCount(): Int = 2
+
+    companion object {
+        private val TAB_TITLES = intArrayOf(R.string.movie, R.string.tv_shows)
+    }
 }
