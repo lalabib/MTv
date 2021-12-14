@@ -16,18 +16,6 @@ import retrofit2.Response
 
 class RemoteDataSource {
 
-    companion object {
-        @Volatile
-        private var instance: RemoteDataSource? = null
-
-        fun getInstance(): RemoteDataSource =
-            instance ?: synchronized(this) {
-                RemoteDataSource().apply { instance = this }
-            }
-
-        private const val TAG = "RemoteData"
-    }
-
     fun getMovie(): LiveData<ApiResponse<MovieResponse>> {
         EspressoIdlingResource.increment()
         val resultMovie = MutableLiveData<ApiResponse<MovieResponse>>()
@@ -100,5 +88,17 @@ class RemoteDataSource {
             }
         })
         return resultDetailTvShow
+    }
+    
+    companion object {
+        @Volatile
+        private var instance: RemoteDataSource? = null
+
+        fun getInstance(): RemoteDataSource =
+            instance ?: synchronized(this) {
+                RemoteDataSource().apply { instance = this }
+            }
+
+        private const val TAG = "RemoteData"
     }
 }
